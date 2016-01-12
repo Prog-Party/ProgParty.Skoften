@@ -1,0 +1,142 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProgParty.Skoften", "ProgParty.Skoften", "{F58DA881-71C9-4B8B-BBCC-FB910034A7B1}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ProgParty.Skoften.Shared", "ProgParty.Skoften\ProgParty.Skoften.Shared\ProgParty.Skoften.Shared.shproj", "{609A79AB-4D4C-4C5F-A07D-4135E14B4040}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgParty.Skoften.Windows", "ProgParty.Skoften\ProgParty.Skoften.Windows\ProgParty.Skoften.Windows.csproj", "{A02AF150-3378-4F95-AE2F-EE3B98693F98}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgParty.Skoften.WindowsPhone", "ProgParty.Skoften\ProgParty.Skoften.WindowsPhone\ProgParty.Skoften.WindowsPhone.csproj", "{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{4D4986A9-DE86-4C6C-BF60-E2DE252C11EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgParty.Skoften.Api", "ProgParty.Skoften.Api\ProgParty.Skoften.Api.csproj", "{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Screenshots", "Screenshots", "{50895AC8-7529-4FD8-90B7-E4A9BCE04E25}"
+	ProjectSection(SolutionItems) = preProject
+		Screenshots\contact.png = Screenshots\contact.png
+		Screenshots\ero.png = Screenshots\ero.png
+		Screenshots\picgif.png = Screenshots\picgif.png
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		ProgParty.Skoften\ProgParty.Skoften.Shared\ProgParty.Skoften.Shared.projitems*{357b9d8e-e2ed-4a84-a7e3-4b7667557be0}*SharedItemsImports = 4
+		ProgParty.Skoften\ProgParty.Skoften.Shared\ProgParty.Skoften.Shared.projitems*{609a79ab-4d4c-4c5f-a07d-4135e14b4040}*SharedItemsImports = 13
+		ProgParty.Skoften\ProgParty.Skoften.Shared\ProgParty.Skoften.Shared.projitems*{a02af150-3378-4f95-ae2f-ee3b98693f98}*SharedItemsImports = 4
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|ARM.ActiveCfg = Debug|ARM
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|ARM.Build.0 = Debug|ARM
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|ARM.Deploy.0 = Debug|ARM
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|x64.ActiveCfg = Debug|x64
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|x64.Build.0 = Debug|x64
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|x64.Deploy.0 = Debug|x64
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|x86.ActiveCfg = Debug|x86
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|x86.Build.0 = Debug|x86
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Debug|x86.Deploy.0 = Debug|x86
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|ARM.ActiveCfg = Release|ARM
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|ARM.Build.0 = Release|ARM
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|ARM.Deploy.0 = Release|ARM
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|x64.ActiveCfg = Release|x64
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|x64.Build.0 = Release|x64
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|x64.Deploy.0 = Release|x64
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|x86.ActiveCfg = Release|x86
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|x86.Build.0 = Release|x86
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98}.Release|x86.Deploy.0 = Release|x86
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|ARM.Build.0 = Debug|ARM
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|ARM.Deploy.0 = Debug|ARM
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|x64.Build.0 = Debug|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|x64.Deploy.0 = Debug|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|x86.ActiveCfg = Debug|x86
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|x86.Build.0 = Debug|x86
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Debug|x86.Deploy.0 = Debug|x86
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|ARM.ActiveCfg = Release|ARM
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|ARM.Build.0 = Release|ARM
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|ARM.Deploy.0 = Release|ARM
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|x64.ActiveCfg = Release|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|x64.Build.0 = Release|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|x64.Deploy.0 = Release|Any CPU
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|x86.ActiveCfg = Release|x86
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|x86.Build.0 = Release|x86
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0}.Release|x86.Deploy.0 = Release|x86
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|ARM.Build.0 = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|x64.Build.0 = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Debug|x86.Build.0 = Debug|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|ARM.ActiveCfg = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|ARM.Build.0 = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|x64.ActiveCfg = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|x64.Build.0 = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|x86.ActiveCfg = Release|Any CPU
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{609A79AB-4D4C-4C5F-A07D-4135E14B4040} = {F58DA881-71C9-4B8B-BBCC-FB910034A7B1}
+		{A02AF150-3378-4F95-AE2F-EE3B98693F98} = {F58DA881-71C9-4B8B-BBCC-FB910034A7B1}
+		{357B9D8E-E2ED-4A84-A7E3-4B7667557BE0} = {F58DA881-71C9-4B8B-BBCC-FB910034A7B1}
+		{357A27F4-C6FE-4B1A-AA77-BB616D2DA88D} = {F58DA881-71C9-4B8B-BBCC-FB910034A7B1}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://jensdenbraber.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ProgParty.Skoften\\ProgParty.Skoften.Shared\\ProgParty.Skoften.Shared.shproj
+		SccProjectTopLevelParentUniqueName1 = ProgParty.Skoften.sln
+		SccProjectName1 = ProgParty.Skoften/ProgParty.Skoften.Shared
+		SccLocalPath1 = ProgParty.Skoften\\ProgParty.Skoften.Shared
+		SccProjectUniqueName2 = ProgParty.Skoften\\ProgParty.Skoften.Windows\\ProgParty.Skoften.Windows.csproj
+		SccProjectTopLevelParentUniqueName2 = ProgParty.Skoften.sln
+		SccProjectName2 = ProgParty.Skoften/ProgParty.Skoften.Windows
+		SccLocalPath2 = ProgParty.Skoften\\ProgParty.Skoften.Windows
+		SccProjectUniqueName3 = ProgParty.Skoften\\ProgParty.Skoften.WindowsPhone\\ProgParty.Skoften.WindowsPhone.csproj
+		SccProjectTopLevelParentUniqueName3 = ProgParty.Skoften.sln
+		SccProjectName3 = ProgParty.Skoften/ProgParty.Skoften.WindowsPhone
+		SccLocalPath3 = ProgParty.Skoften\\ProgParty.Skoften.WindowsPhone
+		SccProjectUniqueName4 = ProgParty.Skoften\\ProgParty.Skoften.Shared\\ProgParty.Skoften.Shared.projitems
+		SccProjectTopLevelParentUniqueName4 = ProgParty.Skoften.sln
+		SccProjectName4 = ProgParty.Skoften/ProgParty.Skoften.Shared
+		SccLocalPath4 = ProgParty.Skoften\\ProgParty.Skoften.Shared
+		SccProjectUniqueName5 = ProgParty.Skoften.Api\\ProgParty.Skoften.Api.csproj
+		SccProjectTopLevelParentUniqueName5 = ProgParty.Skoften.sln
+		SccProjectName5 = ProgParty.Skoften.Api
+		SccLocalPath5 = ProgParty.Skoften.Api
+	EndGlobalSection
+EndGlobal

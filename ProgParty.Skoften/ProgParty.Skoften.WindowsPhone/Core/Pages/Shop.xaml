@@ -1,0 +1,116 @@
+﻿<Page
+    x:Class="ProgParty.Core.Pages.Shop"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ProgParty.Skoften"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="#333333"
+    Foreground="#f8f8f8">
+
+    <Grid x:Name="LayoutRoot" Margin="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        
+        <Image Stretch="UniformToFill" HorizontalAlignment="Center" Source="/Assets/header1.png"/>
+
+        <ScrollViewer Margin="10" Padding="10" Grid.Row="1">
+            <StackPanel Orientation="Vertical">
+                <TextBlock FontSize="20" TextAlignment="Center">Support ons</TextBlock>
+                <TextBlock Margin="0,5,0,5" FontSize="13" TextWrapping="Wrap">Door een aankoop te doen krijg je niet alleen iets tofs voor jezelf, je ondersteunt ook twee dudes die zonder winstoogmerk keihard aan het werk zijn om een super duper te gekke Skoften app aan het maken zijn.</TextBlock>
+                <Grid Margin="0,15,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="100" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition Height="80"/>
+                        <RowDefinition />
+                        <RowDefinition Height="80"/>
+                        <RowDefinition />
+                        <RowDefinition Height="80"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Grid.Column="0" Margin="5" Padding="5" BorderThickness="0" BorderBrush="Black" CornerRadius="50">
+                        <Image Source="Assets/icons/doc_w.png" Height="40" Margin="0,0,0,0"/>
+                    </Border>
+                    <TextBlock Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,0,0,0" FontSize="15" TextWrapping="Wrap">
+                		<Run Text="Verwijder advertenties onderaan de pagina, zo is er meer ruimte voor skoften pic en gif dumps!"/>
+                    </TextBlock>
+
+                    <TextBlock Margin="10,0,0,0" x:Name="RemoveAdsBought" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Foreground="Green" FontSize="15" >
+                		<Run Text="U heeft dit reeds aangekocht! Bedankt"/>
+                    </TextBlock>
+                    <Button x:Name="RemoveAdsButton" Click="BuyRemoveAds_Click" Grid.Row="1" Grid.Column="1" Margin="10,0,0,20" Padding="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/sale.png" Height="40" Margin="0,0,0,0"/>
+                            <TextBlock Text="Koop nu" Margin="10,9,0,0" />
+                        </StackPanel>
+                    </Button>
+
+                    <StackPanel x:Name="RemoveAdsPrice" Orientation="Vertical" Grid.Row="1" Grid.Column="2">
+                        <Grid>
+                            <TextBlock Foreground="Red" FontSize="20" TextAlignment="Center" Text="€ 1,99"/>
+                            <Rectangle Height="2" Stroke="Red" Fill="Red" Width="60" />
+                        </Grid>
+
+                        <TextBlock Foreground="Green" FontSize="25" TextAlignment="Center" Text="€ 0,99"/>
+                    </StackPanel>
+
+                    <Border Grid.Row="2" Grid.Column="0" Margin="5" Height="55" Padding="5" BorderThickness="0" BorderBrush="Black" CornerRadius="50">
+                        <Image Source="Assets/icons/18_w.png" Height="40" Margin="0,0,0,0"/>
+                    </Border>
+                    <TextBlock Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,0,0,0" FontSize="15" TextWrapping="Wrap" Text="Om toegang te krijgen tot de Erodumps doe deze eenmalige aankoop"/>
+
+                    <TextBlock Grid.Row="3" Margin="10,0,0,0" x:Name="UnlockEroDumpsBought" Grid.Column="1" Grid.ColumnSpan="2" Foreground="Green" FontSize="15" >
+                		<Run Text="U heeft dit reeds aangekocht! Bedankt"/>
+                    </TextBlock>
+                    <Button Grid.Row="3" x:Name="UnlockEroDumpsButton" Click="UnlockEroDumps_Click" Grid.Column="1" Margin="10,0,0,20" Padding="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/sale.png" Height="40" Margin="0,0,0,0"/>
+                            <TextBlock Text="Koop nu" Margin="10,9,0,0" />
+                        </StackPanel>
+                    </Button>
+
+                    <StackPanel Grid.Row="3" x:Name="UnlockEroDumpsPrice" Orientation="Vertical" Grid.Column="2">
+                        <Grid>
+                            <TextBlock Foreground="Red" FontSize="20" TextAlignment="Center" Text="€ 1337"/>
+                            <Rectangle Height="2" Stroke="Red" Fill="Red" Width="60" />
+                        </Grid>
+
+                        <TextBlock Foreground="Green" FontSize="25" TextAlignment="Center" Text="€ 0,99"/>
+                    </StackPanel>
+
+                    <Border Grid.Row="4" Grid.Column="0" Margin="5" Height="55" Padding="5" BorderThickness="0" BorderBrush="Black" CornerRadius="50">
+                        <Image Source="Assets/icons/donation_w.png" Height="40" Margin="0,0,0,0"/>
+                    </Border>
+                    <TextBlock Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="10,0,0,0" FontSize="15" TextWrapping="Wrap" Text="Geef een donatie aan Jens en Dennis, ze verdienen een ijsje. Jens is een chocolade fan en Dennis heeft de voorkeur voor vanille."/>
+
+                    <TextBlock Grid.Row="5" Margin="10,0,0,0" x:Name="DonationBought" Grid.Column="1" Grid.ColumnSpan="2" Foreground="Green" FontSize="15" >
+                		<Run Text="U heeft dit reeds aangekocht! Bedankt"/>
+                    </TextBlock>
+                    <Button Grid.Row="5" x:Name="DonationButton" Click="Donation_Click" Grid.Column="1" Margin="10,0,0,20" Padding="0">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/sale.png" Height="40" Margin="0,0,0,0"/>
+                            <TextBlock Text="Koop nu" Margin="10,9,0,0" />
+                        </StackPanel>
+                    </Button>
+
+                    <StackPanel Grid.Row="5" x:Name="DonationPrice" Orientation="Vertical" Grid.Column="2">
+                        <Grid>
+                            <TextBlock Foreground="Red" FontSize="20" TextAlignment="Center" Text="€ 1,17"/>
+                            <Rectangle Height="2" Stroke="Red" Fill="Red" Width="60" />
+                        </Grid>
+
+                        <TextBlock Foreground="Green" FontSize="25" TextAlignment="Center" Text="€ 4,99"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

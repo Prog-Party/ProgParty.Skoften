@@ -34,7 +34,7 @@
                 <Border Margin="10" Grid.Column="1" Style="{StaticResource ButtonBorder}" >
                     <Button x:Name="ButtonReview" Click="ButtonReview_Click">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="Assets/icons/review.png" Height="20"/>
+                            <Image Source="/Core/Assets/icons/review.png" Height="20"/>
                             <TextBlock Text="Plaats review" Margin="10,0,0,0" />
                         </StackPanel>
                     </Button>

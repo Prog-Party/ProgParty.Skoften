@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-  <Identity Name="36742ProgParty.Skoften" Publisher="CN=285D7FE7-AC12-4DC2-8B8B-564986501DC7" Version="1.1.0.2" />
+  <Identity Name="36742ProgParty.Skoften" Publisher="CN=285D7FE7-AC12-4DC2-8B8B-564986501DC7" Version="1.1.0.5" />
   <mp:PhoneIdentity PhoneProductId="73f089c5-5062-4a3c-9e43-85e31214e6c9" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Skoften</DisplayName>

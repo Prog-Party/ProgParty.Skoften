@@ -20,7 +20,7 @@
     <SccAuxPath>SAK</SccAuxPath>
     <SccProvider>SAK</SccProvider>
     <ApplicationInsightsResourceId>/subscriptions/a39fc115-d8bb-4f77-a650-3448d1f112a9/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/ProgParty.Marktplaats.WindowsPhone</ApplicationInsightsResourceId>
-    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundlePlatforms>neutral</AppxBundlePlatforms>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -117,15 +117,6 @@
     <Content Include="Assets\foto_jens_dennis.png" />
     <Content Include="Assets\foto_jens_dennis_mirror.png" />
     <Content Include="Assets\header1.png" />
-    <Content Include="Assets\icons\18_b.png" />
-    <Content Include="Assets\icons\18_w.png" />
-    <Content Include="Assets\icons\advertisement.png" />
-    <Content Include="Assets\icons\doc_b.png" />
-    <Content Include="Assets\icons\doc_w.png" />
-    <Content Include="Assets\icons\donation_b.png" />
-    <Content Include="Assets\icons\donation_w.png" />
-    <Content Include="Assets\icons\girl.png" />
-    <Content Include="Assets\icons\review.png" />
     <Content Include="Assets\Logo.scale-240.png" />
     <Content Include="Assets\sale.png" />
     <Content Include="Assets\SmallLogo.scale-240.png" />

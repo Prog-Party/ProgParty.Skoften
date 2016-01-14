@@ -364,25 +364,33 @@
     </ReservedNames>
   </ProductReservedInfo>
   <AccountPackageIdentityNames>
+    <MainPackageIdentityName>36742ProgParty.AwesomeFlute</MainPackageIdentityName>
+    <MainPackageIdentityName>36742ProgParty.BoredPanda</MainPackageIdentityName>
     <MainPackageIdentityName>36742ProgParty.Marktplaatsonofficieel</MainPackageIdentityName>
-    <MainPackageIdentityName>36742ProgParty.Marktplaatsonofficiel</MainPackageIdentityName>
     <MainPackageIdentityName>36742ProgParty.Marktplaats</MainPackageIdentityName>
+    <MainPackageIdentityName>36742ProgParty.Trending.nl</MainPackageIdentityName>
+    <MainPackageIdentityName>36742ProgParty.WieBetaaltWat</MainPackageIdentityName>
   </AccountPackageIdentityNames>
   <PackageInfoList LandingUrl="https://dev.windows.com/dashboard/Application?appId=9NBLGGH6GRH2">
     <PackageInfo>
       <OsMinVersion>6.3.1.0</OsMinVersion>
       <PackageArchitecture>Neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.1.0.1</PackageMaxArchitectureVersion>
+      <PackageMaxArchitectureVersion>1.1.0.4</PackageMaxArchitectureVersion>
     </PackageInfo>
     <PackageInfo>
       <OsMinVersion>6.3.1.0</OsMinVersion>
       <PackageArchitecture>Neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.1.0.1</PackageMaxArchitectureVersion>
+      <PackageMaxArchitectureVersion>1.1.0.4</PackageMaxArchitectureVersion>
     </PackageInfo>
     <PackageInfo>
       <OsMinVersion>6.3.1.0</OsMinVersion>
       <PackageArchitecture>Neutral</PackageArchitecture>
-      <PackageMaxArchitectureVersion>1.1.0.1</PackageMaxArchitectureVersion>
+      <PackageMaxArchitectureVersion>1.1.0.4</PackageMaxArchitectureVersion>
+    </PackageInfo>
+    <PackageInfo>
+      <OsMinVersion>6.3.1.0</OsMinVersion>
+      <PackageArchitecture>Neutral</PackageArchitecture>
+      <PackageMaxArchitectureVersion>1.1.0.4</PackageMaxArchitectureVersion>
     </PackageInfo>
   </PackageInfoList>
 </StoreAssociation>

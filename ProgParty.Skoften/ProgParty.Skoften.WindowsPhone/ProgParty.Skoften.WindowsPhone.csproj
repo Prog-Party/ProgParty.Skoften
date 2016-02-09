@@ -142,6 +142,7 @@
     <Content Include="Assets\WideLogo.scale-240.png" />
     <Content Include="Core\Assets\foto_jens_dennis.png" />
     <Content Include="Core\Assets\foto_jens_dennis_mirror.png" />
+    <Content Include="Assets\header5.png" />
     <Content Include="Core\Assets\icons\18_b.png" />
     <Content Include="Core\Assets\icons\18_w.png" />
     <Content Include="Core\Assets\icons\advertisement.png" />

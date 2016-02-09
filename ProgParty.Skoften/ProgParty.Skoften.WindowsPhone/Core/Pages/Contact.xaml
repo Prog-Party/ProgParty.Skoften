@@ -16,7 +16,7 @@
             <RowDefinition />
         </Grid.RowDefinitions>
 
-        <Image Stretch="UniformToFill" HorizontalAlignment="Center" Source="/Assets/header1.png"/>
+        <Image Stretch="UniformToFill" HorizontalAlignment="Center" Source="/Assets/header5.png"/>
         
         <ScrollViewer Grid.Row="1">
             <StackPanel Grid.Row="1">

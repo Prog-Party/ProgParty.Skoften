@@ -70,7 +70,8 @@
 
                     <Grid Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-50,0,0">
                         <ComboBox HorizontalAlignment="Right" Background="#ff7800" Foreground="White" x:Name="ComboBoxMenu" VerticalAlignment="Top" SelectionChanged="ComboBoxMenu_SelectionChanged">
-                            <ComboBoxItem x:Name="PicGif" Content="Pic + gifdump" IsSelected="True"/>
+                            <ComboBoxItem x:Name="PicDump" Content="Picdump" IsSelected="True"/>
+                            <ComboBoxItem x:Name="GifDump" Content="Gifdump" />
                             <ComboBoxItem x:Name="Ero" Content="Ero Dump"/>
                         </ComboBox>
                     </Grid>

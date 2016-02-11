@@ -61,7 +61,7 @@ namespace ProgParty.Skoften
             SkoftenDataContext = new SkoftenDataContext();
             DataContext = SkoftenDataContext;
 
-            ShowPicGif();
+            ShowPicDump();
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -87,7 +87,7 @@ namespace ProgParty.Skoften
 
             await Task.Factory.StartNew(() => Searcher.ExecuteSingleDumpScrape(this, context, selectedItem), source.Token);
 
-            if (SkoftenDataContext.CurrentGalleryType == Api.Parameter.OverviewType.PicGif)
+            if (SkoftenDataContext.CurrentGalleryType == Api.Parameter.OverviewType.PicDump)
                 Core.Track.Telemetry.Instance.Action("Shown pic/gif");
             else if (SkoftenDataContext.CurrentGalleryType == Api.Parameter.OverviewType.EroDump)
                 Core.Track.Telemetry.Instance.Action("Shown erodump");
@@ -169,21 +169,34 @@ namespace ProgParty.Skoften
                 }
 
                 TryShowErodump();
-            } else if (item.Name == "PicGif")
+            } else if (item.Name == "PicDump")
             {
                 if (DoNotLoadAfterChange)
                     DoNotLoadAfterChange = false;
                 else
-                    ShowPicGif();
+                    ShowPicDump();
+            }
+            else if (item.Name == "GifDump")
+            {
+                if (DoNotLoadAfterChange)
+                    DoNotLoadAfterChange = false;
+                else
+                    ShowGifDump();
             }
         }
 
         bool DoNotLoadAfterChange = true;
 
-        private async void ShowPicGif()
+        private async void ShowGifDump()
         {
-            Core.Track.Telemetry.Instance.Action("Filter", new Dictionary<string, string>() { { "filter", "Pic/gif" } });
-            this.SkoftenDataContext.CurrentGalleryType = Api.Parameter.OverviewType.PicGif;
+            Core.Track.Telemetry.Instance.Action("Filter", new Dictionary<string, string>() { { "filter", "Gifdump" } });
+            this.SkoftenDataContext.CurrentGalleryType = Api.Parameter.OverviewType.GifDump;
+            await Task.Factory.StartNew(() => Searcher.ExecuteGaleryScrape(this, context, new Api.Parameter.OverviewParameter() { StartOver = true }), source.Token);
+        }
+        private async void ShowPicDump()
+        {
+            Core.Track.Telemetry.Instance.Action("Filter", new Dictionary<string, string>() { { "filter", "Picdump" } });
+            this.SkoftenDataContext.CurrentGalleryType = Api.Parameter.OverviewType.PicDump;
             await Task.Factory.StartNew(() => Searcher.ExecuteGaleryScrape(this, context, new Api.Parameter.OverviewParameter() { StartOver = true }), source.Token);
         }
 

@@ -23,7 +23,7 @@ namespace ProgParty.Skoften.Api.Scrape
 
             using (HttpClient client = new HttpClient())
             {
-                if (Parameters.Type == Parameter.OverviewType.PicGif)
+                if (Parameters.Type == Parameter.OverviewType.PicDump)
                     client.DefaultRequestHeaders.Host = "www.skoften.net";
                 else if (Parameters.Type == Parameter.OverviewType.EroDump)
                     client.DefaultRequestHeaders.Host = "babes.skoften.net";
@@ -46,7 +46,14 @@ namespace ProgParty.Skoften.Api.Scrape
             document.LoadHtml(result);
             var node = document.DocumentNode;
 
-            var imgNodes = node.Descendants("img").Where(c => c.Attributes["class"]?.Value.Contains("lazyload") ?? false);
+            IEnumerable<HtmlNode> imgNodes = new List<HtmlNode>();
+            
+            if(Parameters.Type == Parameter.OverviewType.EroDump
+                || Parameters.Type == Parameter.OverviewType.GifDump)
+                imgNodes = node.Descendants("img").Where(c => c.Attributes["class"]?.Value.Contains("img") ?? false);
+            else if (Parameters.Type == Parameter.OverviewType.PicDump)
+                imgNodes = node.Descendants("img").Where(c => c.Attributes["class"]?.Value.Contains("lazyload") ?? false);
+
             if (imgNodes == null || !imgNodes.Any())
                 return dumpResult;
 
@@ -63,8 +70,10 @@ namespace ProgParty.Skoften.Api.Scrape
             DumpResult result = new DumpResult();
 
             HtmlAttribute srcAttr = null;
-            if (Parameters.Type == Parameter.OverviewType.PicGif)
+            if (Parameters.Type == Parameter.OverviewType.PicDump)
                 srcAttr = node.Attributes["data-src"];
+            else if (Parameters.Type == Parameter.OverviewType.GifDump)
+                srcAttr = node.Attributes["data-gif"];
             else if (Parameters.Type == Parameter.OverviewType.EroDump)
                 srcAttr = node.Attributes["src"];
 

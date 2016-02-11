@@ -21,7 +21,8 @@ namespace ProgParty.Skoften.Api.Scrape
 
             using (HttpClient client = new HttpClient())
             {
-                if (Parameters.Type == Parameter.OverviewType.PicGif)
+                if (Parameters.Type == Parameter.OverviewType.PicDump
+                    || Parameters.Type == Parameter.OverviewType.GifDump)
                     client.DefaultRequestHeaders.Host = "www.skoften.net";
                 if (Parameters.Type == Parameter.OverviewType.EroDump)
                     client.DefaultRequestHeaders.Host = "babes.skoften.net";
@@ -37,32 +38,26 @@ namespace ProgParty.Skoften.Api.Scrape
 
         public string ConstructUrl()
         {
+            var baseUrl = "";
             switch(Parameters.Type)
             {
-                case Parameter.OverviewType.PicGif:
-                    string picBaseurl = $"http://www.skoften.net/galleries";
-                    if (string.IsNullOrEmpty(Parameters.Category))
-                    {
-                        if (Parameters.Paging != 0)
-                            picBaseurl = $"{picBaseurl}/ P{Parameters.Paging}";
-                    }
-                    else
-                    {
-                        picBaseurl = $"{picBaseurl}/search&category={Parameters.Category}";
-                        if (Parameters.Paging != 0)
-                            picBaseurl = $"{picBaseurl}&offset=0/P{Parameters.Paging}";
-                    }
-                    return picBaseurl;
+                case Parameter.OverviewType.GifDump:
+                    baseUrl = "http://www.skoften.net/ajax/entriesTags/skoften/gifdump/";
+                    break;
+                case Parameter.OverviewType.PicDump:
+                    baseUrl = "http://www.skoften.net/ajax/entriesTags/skoften/picdump/";
+                    break;
                 case Parameter.OverviewType.EroDump:
-                    string eroBaseUrl = "http://babes.skoften.net/";
-
-                    if (Parameters.Paging != 0)
-                        eroBaseUrl = $"{eroBaseUrl}/ P{Parameters.Paging}";
-
-                    return eroBaseUrl;
+                    baseUrl = "http://babes.skoften.net/ajax/entriesBabes/babes/";
+                    break; ;
                 default:
                     throw new System.Exception("Not implemented the parameter: " + Parameters.Type);
-            } 
+            }
+
+            if (Parameters.Paging != 0)
+                baseUrl = $"{baseUrl}/P{Parameters.Paging}";
+
+            return baseUrl;
         }
 
         public List<OverviewResult> ConvertToResult(string result)
@@ -73,15 +68,17 @@ namespace ProgParty.Skoften.Api.Scrape
             document.LoadHtml(result);
             var node = document.DocumentNode;
 
-            var ulNode = node.Descendants("ul").SingleOrDefault(c => c.Attributes["class"]?.Value.Contains("channelBlocks") ?? false);
-            if (ulNode == null)
+            string classContains = "grid-item small";
+            if (Parameters.Type == Parameter.OverviewType.EroDump)
+                classContains = "grid-item large";
+
+            var divs = node.Descendants("div").Where(c => c.Attributes["class"]?.Value?.Contains(classContains) ?? false);
+            if (divs == null)
                 return overviewResult;
 
-            var lis = ulNode.Descendants("li");
-
-            foreach (var li in lis)
+            foreach (var gridItem in divs)
             {
-                overviewResult.Add(ConvertSingleResult(li));
+                overviewResult.Add(ConvertSingleResult(gridItem));
             }
 
             if (overviewResult.Count > 12)
@@ -93,14 +90,15 @@ namespace ProgParty.Skoften.Api.Scrape
         public OverviewResult ConvertSingleResult(HtmlNode node)
         {
             OverviewResult result = new OverviewResult();
-            result.Url = node.Descendants("a").SingleOrDefault()?.Attributes["href"]?.Value;
-            result.Type = node.Descendants("h4").SingleOrDefault()?.InnerText;
-            result.Name = System.Net.WebUtility.HtmlDecode(node.Descendants("h2").SingleOrDefault()?.InnerText);
+            result.Url = node.Descendants("a").FirstOrDefault()?.Attributes["href"]?.Value;
+            result.Type = node.Descendants("p").FirstOrDefault(p => p.Attributes["class"]?.Value?.Contains("description") ?? false)?.InnerText;
+            result.Name = System.Net.WebUtility.HtmlDecode(node.Descendants("h3").FirstOrDefault()?.InnerText);
             result.ImageUrl = node.Descendants("img").FirstOrDefault()?.Attributes["src"]?.Value;
 
             if (!result.Url.StartsWith("http://"))
             {
-                if(Parameters.Type == Parameter.OverviewType.PicGif) 
+                if(Parameters.Type == Parameter.OverviewType.PicDump
+                    || Parameters.Type == Parameter.OverviewType.GifDump) 
                     result.Url = $"http://www.skoften.net/{result.Url}";
                 else if (Parameters.Type == Parameter.OverviewType.EroDump)
                     result.Url = $"http://babes.skoften.net/{result.Url}";

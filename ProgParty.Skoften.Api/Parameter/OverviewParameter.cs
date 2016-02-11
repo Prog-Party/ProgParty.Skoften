@@ -14,12 +14,13 @@ namespace ProgParty.Skoften.Api.Parameter
 
         public bool StartOver { get; set; } = false;
 
-        public OverviewType Type { get; set; } = OverviewType.PicGif;
+        public OverviewType Type { get; set; } = OverviewType.PicDump;
     }
 
     public enum OverviewType
     {
-        PicGif,
+        PicDump,
+        GifDump,
         EroDump
     }
 }

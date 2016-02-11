@@ -27,7 +27,7 @@ namespace ProgParty.Skoften
         public int GalleryItemIndex = 0;
         public int SelectedGallery = 0;
 
-        public Api.Parameter.OverviewType CurrentGalleryType { get; set; } = Api.Parameter.OverviewType.PicGif;
+        public Api.Parameter.OverviewType CurrentGalleryType { get; set; } = Api.Parameter.OverviewType.PicDump;
 
         private bool _dumpItemsLoading = false;
         public bool DumpItemsLoading
